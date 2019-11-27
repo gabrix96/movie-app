@@ -1,0 +1,16 @@
+button:hover {
+    background-color:red;
+  }
+ button {
+    margin-top: 20px;
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+.row{
+  margin-top: 1.5cm;
+}
