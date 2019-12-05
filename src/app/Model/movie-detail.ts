@@ -1,17 +1,16 @@
 export class MovieDetail{
-    title:string;
-    year:string;
-    rated:string;
-    released:string;
-    runtime:string;
-    genre:string;
-    director:string;
-    writer:string;
-    actors:string;
-    plot:string;
-    language:string;
-    country:string;
-    awards:string;
-    poster:string;
+    Title:string;
+    Year:string;
+    Rated:string;
+    Released:string;
+    Runtime:string;
+    Genre:string;
+    Director:string;
+    Writer:string;
+    Actors:string;
+    Plot:string;
+    Language:string;
+    Country:string;
+    Awards:string;
    
 }

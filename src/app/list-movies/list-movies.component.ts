@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MOVIES} from '../Model/mock-movie';
 import {MoviesService } from '../movies.service';
+import { HttpClient } from '@angular/common/http';
 import {Movies} from '../Model/movie';
 @Component({
   selector: 'app-list-movies',
@@ -15,8 +15,13 @@ export class ListMoviesComponent implements OnInit {
 
   getMovies():void{
     this.movieService.getMovies()
-    .subscribe(movies=>this.movies = movies);
+    .subscribe(res=>{
+      
+      this.movies = res.Search;
+    }
+      );
   }
+  
   ngOnInit() {
     this.getMovies();
   }

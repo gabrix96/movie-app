@@ -4,14 +4,15 @@
     <div class="row">
       <ul class="movies" *ngFor="let movie of movies">
         <div class="col-sm" >
-            <div class="card h-100" style="width: 18rem;">
+            <div class="card h-100" style="width: 20rem;">
                 <div class="card-block" >
-                    <img src="{{ movie.poster }}" class="card-img">
-                    <h4 class="card-title">{{movie.title}}</h4>
-                    <p class="card-text">Anno: {{movie.year}}</p>
+                    <img src="{{ movie.Poster }}" class="card-img">
+                    <h4 class="card-title">{{movie.Title}}</h4>
+                    <p class="card-text">Anno: {{movie.Year}}</p>
                     <p class="card-text">imdbID: {{movie.imdbID}}</p>
-                    <p class="card-text">Tipo: {{movie.type}}</p>
-                    <button>mostra dettagli</button>
+                    <p class="card-text">Tipo: {{movie.Type}}</p>
+                    <a routerLink="/detail-movie/{{movie.imdbID}}" class="btn btn-primary">Details</a>
+                    
                 </div>
             </div>
         </div>

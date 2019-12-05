@@ -7,9 +7,12 @@ import { ListMoviesComponent } from './list-movies/list-movies.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessagesComponent } from './messages/messages.component';
-import { HttpClientModule }    from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MoviesService } from './movies.service';
+import { AppRoutingModule } from './app-routing.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +26,10 @@ import { InMemoryDataService }  from './in-memory-data.service';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    AppRoutingModule,
+   
   ],
-  providers: [],
+  providers: [MoviesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
